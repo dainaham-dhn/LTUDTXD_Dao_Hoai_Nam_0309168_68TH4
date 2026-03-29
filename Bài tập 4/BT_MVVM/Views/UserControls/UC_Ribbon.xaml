@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="BT_MVVM.Views.UserControls.UC_Ribbon"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BT_MVVM.Views.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="150" d:DesignWidth="800">
+    <Grid>
+        <Ribbon SelectedIndex="1" Grid.Row="0" Background="#FFDDE7F4">
+            <RibbonTab Header="File" >
+                <RibbonGroup Header="Etabs API">
+                    <RibbonButton Label="Kết nối Etabs"
+                            LargeImageSource="/Assets/Icons/AddLink.png"/>
+                    <RibbonButton Label="Danh sách Phần tử thanh"
+                    x:Name="rbt_Frames"
+                    Click="rbt_Frames_Click"
+                    LargeImageSource="/Assets/Icons/Left Arrow.png"/>
+                    <RibbonButton x:Name="rbt_2Dplan" Label="Mặt bằng 2D" Click="rbt_2Dplan_Click"
+                              SmallImageSource="/Assets/Icons/Bookmark.png"/>
+                    <RibbonCheckBox Label="Lấy dữ liệu tự động"/>
+                    <RibbonComboBox Label="Chọn loại kết cấu"
+                               SmallImageSource="/Assets/Icons/Download from the Cloud.png">
+                        <RibbonGallery>
+                            <RibbonGalleryCategory>
+                                <RibbonGalleryItem Content="Kết cấu thép"/>
+                                <RibbonGalleryItem Content="Kết cấu bê tông"/>
+                                <RibbonGalleryItem Content="Kết cấu gỗ"/>
+                            </RibbonGalleryCategory>
+                        </RibbonGallery>
+                    </RibbonComboBox>
+                </RibbonGroup>
+
+            </RibbonTab>
+
+            <RibbonTab Header="Thiết kế">
+                <RibbonGroup Header="Thiết kế">
+                    <RibbonButton Label="Danh sách Dầm"
+                            x:Name="rbt_Beams"
+                            Click="rbt_Beams_Click"
+                            LargeImageSource="/Assets/Icons/Left Arrow.png"/>
+                    
+                </RibbonGroup>
+            </RibbonTab>
+        </Ribbon>
+    </Grid>
+</UserControl>

@@ -1,0 +1,30 @@
+﻿<Window x:Class="BT_MVVM.Views.EtabsAPI_FramesView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BT_MVVM.Views"
+        xmlns:framesviewmodel="clr-namespace:BT_MVVM.ViewModels"
+        mc:Ignorable="d"
+        Title="EtabsAPI_FramesView" Height="450" Width="800">
+    <Window.DataContext>
+        <framesviewmodel:EtabsAPI_FramesViewmodel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <DataGrid Grid.Row="0" ItemsSource="{Binding EtabsFrames}" AutoGenerateColumns="False" Margin="10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding MyName}" Width="Auto"/>
+                <DataGridTextColumn Header="Label" Binding="{Binding Label}" Width="*"/>
+                <DataGridTextColumn Header="Section" Binding="{Binding PropName}" Width="*"/>
+                <DataGridTextColumn Header="StoryName" Binding="{Binding StoryName}" Width="*"/>
+                <DataGridTextColumn Header="Length" Binding="{Binding Length}" Width="Auto"/>
+                
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

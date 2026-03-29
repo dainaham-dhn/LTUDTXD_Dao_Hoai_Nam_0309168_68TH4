@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="Bai5_UserControl_Page_68TH.View.UserControls.UC_Ribbon"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Bai5_UserControl_Page_68TH.View.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="150" d:DesignWidth="800">
+    <Grid>
+        <Ribbon SelectedIndex="0">
+            <RibbonTab Header="Home">
+                <RibbonGroup Header="Tính năng">
+                    <RibbonButton Label="Link" SmallImageSource="/Assets/Icons/Add Link.png"/>
+                    <RibbonButton Label="Copy" SmallImageSource="/Assets/Icons/Copy.png"/>
+                    <RibbonButton Label="Paste" SmallImageSource="/Assets/Icons/paste.png"/>
+                </RibbonGroup>
+                <RibbonGroup Header="Kết nối Etabs">
+                    <RibbonButton Label="Etabs API" LargeImageSource="/Assets/Icons/etabs.png"/>
+                </RibbonGroup>
+            </RibbonTab>
+            <RibbonTab Header="Thông số">
+                <RibbonGroup Header="Vật liệu">
+                 <RibbonButton x:Name="rbt_betong" Click="rbt_betong_Click" Label="Bê tông" LargeImageSource="/Assets/Icons/vật liệu.png"/>
+                <RibbonButton x:Name="rbt_cotthep" Click="rbt_cotthep_Click" Label="Cốt thép" LargeImageSource="/Assets/Icons/cotthep.ico"/>
+                </RibbonGroup>
+                <RibbonGroup Header="Mặt bằng">
+                    <RibbonButton x:Name="rbt_2dplan" Click="rbt_2dplan_Click" Label="Mặt bằng 2D" LargeImageSource="/Assets/Icons/MB2D.png"/>
+                </RibbonGroup>
+            </RibbonTab>
+        </Ribbon>
+    </Grid>
+</UserControl>

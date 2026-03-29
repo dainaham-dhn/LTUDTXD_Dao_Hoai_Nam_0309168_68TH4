@@ -1,0 +1,90 @@
+﻿<Window x:Class="Bai5_UserControl_Page_68TH.View.Pages.Betong"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bai5_UserControl_Page_68TH.View.Pages"
+        mc:Ignorable="d"
+        Title="Betong" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Tiêu đề -->
+        <TextBlock Text="KHAI BÁO VẬT LIỆU BÊ TÔNG"
+                   FontSize="18" FontWeight="Bold"
+                   HorizontalAlignment="Center" Margin="0,0,0,10"/>
+
+        <!-- Nội dung -->
+        <Grid Grid.Row="1" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Cột trái -->
+            <StackPanel Grid.Column="0" Margin="10">
+
+                <TextBlock Text="Loại bê tông"/>
+                <ComboBox>
+                    <ComboBoxItem Content="Bê tông thường"/>
+                    <ComboBoxItem Content="Bê tông cốt thép"/>
+                    <ComboBoxItem Content="Bê tông dự ứng lực"/>
+                </ComboBox>
+
+                <TextBlock Text="Mác bê tông" Margin="0,10,0,0"/>
+                <ComboBox>
+                    <ComboBoxItem Content="B20"/>
+                    <ComboBoxItem Content="B25"/>
+                    <ComboBoxItem Content="B30"/>
+                    <ComboBoxItem Content="B35"/>
+                    <ComboBoxItem Content="B40"/>
+                </ComboBox>
+
+                <TextBlock Text="Cường độ chịu nén Rb (MPa)" Margin="0,10,0,0"/>
+                <TextBox/>
+
+                <TextBlock Text="Cường độ chịu kéo Rbt (MPa)" Margin="0,10,0,0"/>
+                <TextBox/>
+
+                <TextBlock Text="Mô đun đàn hồi E (MPa)" Margin="0,10,0,0"/>
+                <TextBox/>
+
+            </StackPanel>
+
+            <!-- Cột phải -->
+            <StackPanel Grid.Column="1" Margin="10">
+
+                <TextBlock Text="Khối lượng riêng (kg/m³)"/>
+                <TextBox Text="2500"/>
+
+                <TextBlock Text="Hệ số Poisson" Margin="0,10,0,0"/>
+                <TextBox Text="0.2"/>
+
+                <TextBlock Text="Hệ số làm việc γb" Margin="0,10,0,0"/>
+                <TextBox Text="1.0"/>
+
+                <TextBlock Text="Độ sụt (cm)" Margin="0,10,0,0"/>
+                <TextBox/>
+
+                <TextBlock Text="Môi trường làm việc" Margin="0,10,0,0"/>
+                <ComboBox>
+                    <ComboBoxItem Content="Trong nhà"/>
+                    <ComboBoxItem Content="Ngoài trời"/>
+                    <ComboBoxItem Content="Xâm thực"/>
+                </ComboBox>
+
+            </StackPanel>
+        </Grid>
+
+        <!-- Nút -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Lưu" Width="100" Margin="5"/>
+            <Button Content="Reset" Width="100" Margin="5"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
